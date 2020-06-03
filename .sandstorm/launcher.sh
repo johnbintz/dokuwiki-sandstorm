@@ -2,7 +2,7 @@
 
 # Create a bunch of folders under the clean /var that php and nginx expect to exist
 mkdir -p /var/lib/nginx
-mkdir -p /var/lib/php5/sessions
+mkdir -p /var/lib/php7.0/sessions
 mkdir -p /var/log
 mkdir -p /var/log/nginx
 mkdir -p /var/www
@@ -12,10 +12,10 @@ rm -rf /var/run
 mkdir -p /var/run
 
 # Spawn php
-/usr/sbin/php5-fpm --nodaemonize --fpm-config /etc/php5/fpm/php-fpm.conf &
+/usr/sbin/php-fpm7.0 -R --nodaemonize --fpm-config /etc/php/7.0/fpm/php-fpm.conf &
 # Wait until php have bound its socket, indicating readiness
-while [ ! -e /var/run/php5-fpm.sock ] ; do
-  echo "waiting for php5-fpm to be available at /var/run/php5-fpm.sock"
+while [ ! -e /var/run/php-fpm7.0.sock ] ; do
+  echo "waiting for php-fpm7.0 to be available at /var/run/php-fpm7.0.sock"
   sleep .2
 done
 
