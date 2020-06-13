@@ -1,0 +1,22 @@
+#!/bin/bash
+
+bin/cleanup_dokuwiki
+cd dokuwiki
+git fetch
+git checkout $1
+if [ $? -ne 0 ]; then
+  echo "Tag not found!"
+  exit 1
+fi
+
+cd ..
+
+echo "Now:"
+echo
+echo "vagrant-spk vm destroy"
+echo "vagrant-spk vm up"
+echo "Test locally"
+echo "vagrant-spk pack ../dokuwiki-sandstorm-$1.pkg"
+echo "Test upgrade"
+echo "vagrant-spk publish ../dokuwiki-sandstorm-$1.pkg"
+

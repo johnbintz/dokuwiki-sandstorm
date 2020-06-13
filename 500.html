@@ -1,0 +1,41 @@
+<html>
+  <head><title>Uh oh, a plugin might be failing...</title></head>
+  <body>
+    <h1>Uh oh, a plugin might be failing...</h1>
+    <p>
+      You might have a plugin that's failing. If you installed any
+      custom plugins manually, they may not function correctly with
+      this version of DokuWiki. You should look in they
+      Grain Log for this grain to examine the errors from PHP-FPM.
+      If the issue is in plugin code, you'll have to remove the plugin manually
+      from the grain's filestructure via backup and restore.
+      You can then try installing a new version of the plugin, or find
+      a different one with better compatibility.
+    </p>
+
+    <h2>To fix a plugin issue:</h2>
+
+    <ol>
+      <li>Download a Backup of the grain.</li>
+      <li>Unzip the grain archive.</li>
+      <li>
+        Find the plugin that the error is referring to in
+        the <code>data/lib/dokiwiki/lib/plugins</code> folder and remove the
+        plugin's folder.
+      </li>
+      <li>
+        Zip up the unzipped grain archive, taking care to
+        preserve the same root files/folders as the original
+        Zip file.
+      </li>
+      <li>
+        Restore the grain from backup using the new Zip file.
+      </li>
+      <li>
+        Run the new grain. If it's working again, great!
+        If not, see if the error is still with plugins that
+        need removal/upgrading.
+      </li>
+    </ol>
+  </body>
+</html>

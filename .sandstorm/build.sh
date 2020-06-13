@@ -13,6 +13,8 @@ if [ -f /opt/app/dokuwiki/composer.json ] ; then
 fi
 
 rsync -a /opt/app/plugin/ /opt/app/dokuwiki/lib/plugins/sandstorm/
+cp /opt/app/500.html /opt/app/dokuwiki/
+cp /opt/app/preload.php /opt/app/dokuwiki/inc/
 
 for p in /opt/app/dokuwiki/{conf,data,lib/plugins,lib/tpl}; do
   if [ ! -e $p.orig ]; then
