@@ -19,9 +19,9 @@ const pkgdef :Spk.PackageDefinition = (
 
     appTitle = (defaultText = "DokuWiki"),
 
-    appVersion = 5,  # Increment this for every release.
+    appVersion = 7,  # Increment this for every release.
 
-    appMarketingVersion = (defaultText = "2017-02-19b-sandstorm6"),
+    appMarketingVersion = (defaultText = "2017-02-19g~2020-06-13"),
     # Human-readable representation of appVersion. Should match the way you
     # identify versions of your app in documentation and marketing.
 

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd dokuwiki
+git reset --hard
+git clean -dxf
+find . -name '*.orig' -exec rm -Rf {} \;
+
+echo "Dokuwiki cleaned up for another build attempt"

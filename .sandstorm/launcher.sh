@@ -2,7 +2,7 @@
 
 # Create a bunch of folders under the clean /var that php and nginx expect to exist
 mkdir -p /var/lib/nginx
-mkdir -p /var/lib/php7.0/sessions
+mkdir -p /var/lib/php/sessions
 mkdir -p /var/log
 mkdir -p /var/log/nginx
 mkdir -p /var/www
