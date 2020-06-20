@@ -481,6 +481,7 @@ opt/app/dokuwiki/inc
 opt/app/dokuwiki/inc/HTTPClient.php
 opt/app/dokuwiki/inc/Input.class.php
 opt/app/dokuwiki/inc/JSON.php
+opt/app/dokuwiki/inc/JpegMeta.php
 opt/app/dokuwiki/inc/PassHash.class.php
 opt/app/dokuwiki/inc/Sitemapper.php
 opt/app/dokuwiki/inc/Ui/Admin.php
@@ -495,6 +496,7 @@ opt/app/dokuwiki/inc/compatibility.php
 opt/app/dokuwiki/inc/config_cascade.php
 opt/app/dokuwiki/inc/confutils.php
 opt/app/dokuwiki/inc/events.php
+opt/app/dokuwiki/inc/fetch.functions.php
 opt/app/dokuwiki/inc/form.php
 opt/app/dokuwiki/inc/fulltext.php
 opt/app/dokuwiki/inc/html.php
@@ -755,6 +757,7 @@ opt/app/dokuwiki/lib/images/license/button/cc-zero.png
 opt/app/dokuwiki/lib/images/license/button/cc.png
 opt/app/dokuwiki/lib/images/license/button/gnufdl.png
 opt/app/dokuwiki/lib/images/license/button/publicdomain.png
+opt/app/dokuwiki/lib/images/loading.gif
 opt/app/dokuwiki/lib/images/magnifier.png
 opt/app/dokuwiki/lib/images/media_align_center.png
 opt/app/dokuwiki/lib/images/media_align_left.png

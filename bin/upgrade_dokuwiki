@@ -1,22 +1,50 @@
-#!/bin/bash
+#!/usr/bin/env ruby
 
-bin/cleanup_dokuwiki
-cd dokuwiki
-git fetch
-git checkout $1
-if [ $? -ne 0 ]; then
-  echo "Tag not found!"
+require 'time'
+
+system("bin/cleanup_dokuwiki")
+
+tag = ARGV[0]
+
+unless tag
+  puts "Usage: #{$0} <tag>"
+
   exit 1
-fi
+end
 
-cd ..
+Dir.chdir "dokuwiki" do
+  system("git fetch")
+  system("git checkout #{tag}")
 
-echo "Now:"
-echo
-echo "vagrant-spk vm destroy"
-echo "vagrant-spk vm up"
-echo "Test locally"
-echo "vagrant-spk pack ../dokuwiki-sandstorm-$1.pkg"
-echo "Test upgrade"
-echo "vagrant-spk publish ../dokuwiki-sandstorm-$1.pkg"
+  if $? != 0
+    puts "Tag not found!"
+    exit 1
+  end
+end
+
+puts "#{tag} exists, updating files"
+
+today = Time.now.strftime('%Y-%m-%d')
+version = tag.gsub(/^release_(stable|candidate)_/, '')
+
+File.open('.sandstorm/app-marketing-version', 'w') { |fh| fh.puts "#{version}~#{today}" }
+
+lines = File.readlines('.sandstorm/sandstorm-pkgdef.capnp')
+
+lines = lines.map do |line|
+  next line unless line['appVersion']
+
+  line.gsub(/= ([0-9])+,/) { |m| "= #{$1.to_i + 1}," }
+end
+
+File.open('.sandstorm/sandstorm-pkgdef.capnp', 'w') { |fh| fh.print lines.join }
+
+puts "Now:"
+puts
+puts "vagrant-spk vm destroy"
+puts "vagrant-spk vm up"
+puts "vagrant-spk dev to Test locally"
+puts "vagrant-spk pack ../dokuwiki-sandstorm-#{version}.pkg"
+puts "Test upgrade"
+puts "vagrant-spk publish ../dokuwiki-sandstorm-#{version}.pkg"
 

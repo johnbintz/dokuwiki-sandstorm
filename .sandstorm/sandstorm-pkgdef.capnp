@@ -9,7 +9,7 @@ const pkgdef :Spk.PackageDefinition = (
   # The package definition. Note that the spk tool looks specifically for the
   # "pkgdef" constant.
 
-  id = "s97k5f7mkzjtz6nn440cm2dyv5ay4p3aqaxumhp1mv2s5k35cfah",
+  id = "nx3dqcmz2sjjz939vkg4847vvxrzqsatqfjrt3ea50z3jac5kv7h",
   # Your app ID is actually its public key. The private key was placed in
   # your keyring. All updates must be signed with the same key.
 
@@ -19,9 +19,9 @@ const pkgdef :Spk.PackageDefinition = (
 
     appTitle = (defaultText = "DokuWiki"),
 
-    appVersion = 7,  # Increment this for every release.
+    appVersion = 6,  # Increment this for every release.
 
-    appMarketingVersion = (defaultText = "2017-02-19g~2020-06-13"),
+    appMarketingVersion = (defaultText = (embed "app-marketing-version")),
     # Human-readable representation of appVersion. Should match the way you
     # identify versions of your app in documentation and marketing.
 
@@ -57,7 +57,7 @@ const pkgdef :Spk.PackageDefinition = (
       website = "http://dokuwiki.org",
       # This should be the app's main website url.
 
-      codeUrl = "https://github.com/ndarilek/dokuwiki-sandstorm",
+      codeUrl = "https://github.com/johnbintz/dokuwiki-sandstorm",
       # URL of the app's source code repository, e.g. a GitHub URL.
       # Required if you specify a license requiring redistributing code, but optional otherwise.
 
@@ -73,7 +73,7 @@ const pkgdef :Spk.PackageDefinition = (
       author = (
         # Fields relating to the author of this app.
 
-        contactEmail = "nolan@thewordnerd.info",
+        contactEmail = "sandstorm@leapingsheepfarm.com",
         # Email address to contact for any issues with this app. This includes end-user support
         # requests as well as app store administrator requests, so it is very important that this be a
         # valid address with someone paying attention to it.
