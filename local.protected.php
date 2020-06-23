@@ -18,3 +18,4 @@ $conf['userewrite']  = 1;                //this makes nice URLs: 0: off 1: .htac
 $conf['useslash']    = 1;                //use slash instead of colon? only when rewrite is on
 $conf['useacl']      = 1;                //Use Access Control Lists to restrict access?
 $conf['savedir']     = '/var/lib/dokuwiki/data';          //where to store all the files
+$conf['target']['extern'] = '_blank'; // always open external links in a new window

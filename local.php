@@ -9,4 +9,3 @@
  */
 
 $conf['showuseras']  = 'username';
-$conf['target']['extern'] = '_blank'; // always open external links in a new window

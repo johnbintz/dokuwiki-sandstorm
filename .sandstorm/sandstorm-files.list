@@ -507,8 +507,10 @@ opt/app/dokuwiki/inc/init.php
 opt/app/dokuwiki/inc/io.php
 opt/app/dokuwiki/inc/lang
 opt/app/dokuwiki/inc/lang/en/admin.txt
+opt/app/dokuwiki/inc/lang/en/edit.txt
 opt/app/dokuwiki/inc/lang/en/lang.php
 opt/app/dokuwiki/inc/lang/en/newpage.txt
+opt/app/dokuwiki/inc/lang/en/stopwords.txt
 opt/app/dokuwiki/inc/lessc.inc.php
 opt/app/dokuwiki/inc/load.php
 opt/app/dokuwiki/inc/mail.php
@@ -516,6 +518,7 @@ opt/app/dokuwiki/inc/media.php
 opt/app/dokuwiki/inc/pageutils.php
 opt/app/dokuwiki/inc/parser/handler.php
 opt/app/dokuwiki/inc/parser/lexer.php
+opt/app/dokuwiki/inc/parser/metadata.php
 opt/app/dokuwiki/inc/parser/parser.php
 opt/app/dokuwiki/inc/parser/renderer.php
 opt/app/dokuwiki/inc/parser/xhtml.php
