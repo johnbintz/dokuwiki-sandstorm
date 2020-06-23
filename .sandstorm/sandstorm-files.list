@@ -3017,6 +3017,7 @@ opt/app/dokuwiki/vendor/splitbrain/php-archive/src/FileInfo.php
 opt/app/dokuwiki/vendor/splitbrain/php-archive/src/Tar.php
 opt/app/dokuwiki/vendor/splitbrain/php-archive/src/Zip.php
 opt/app/local.php
+opt/app/local.protected.php
 opt/app/plugin
 opt/app/plugin/README
 opt/app/plugin/auth.php

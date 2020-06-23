@@ -27,6 +27,8 @@ if [ ! -e /var/lib/dokuwiki/conf/local.php ]; then
   cp /opt/app/local.php /var/lib/dokuwiki/conf
 fi
 rm -f /var/lib/dokuwiki/conf/conf
+# sandstorm-specific things go here
+cp /opt/app/local.protected.php /var/lib/dokuwiki/conf
 
 if [ ! -e /var/lib/dokuwiki/data ]; then
   echo Adding data.
