@@ -10,7 +10,7 @@ A lightweight wiki for your personal use.
 
 ### Sandstorm Upgrades
 
-_(last updated 2020-07-17)_
+_(last updated 2020-09-01)_
 
 The version in the app store is far behind the current releases of
 DokuWiki. In order to minimize the amount of hassle with getting Sandstorm's
@@ -24,9 +24,12 @@ the [Download DokuWiki](https://download.dokuwiki.org/) page,
 and will be updated as new releases are available in the [App Store](https://apps.sandstorm.io/).
 
 * Previous: 2017-02-19b
-* [Currently in App Store](https://apps.sandstorm.io/app/nx3dqcmz2sjjz939vkg4847vvxrzqsatqfjrt3ea50z3jac5kv7h): 2017-02-19g (old stable)
-* Next: 2018-04-22c (stable)
-* Next: rc-2020-06-09 (recommended version)
+* Previous: 2017-02-19g (old stable)
+* [Currently in App Store](https://apps.sandstorm.io/app/nx3dqcmz2sjjz939vkg4847vvxrzqsatqfjrt3ea50z3jac5kv7h): 2018-04-22c (stable)
+* Next: 2020-07-29 (recommended version)
+
+Once 2020-07-29 has been in the App Store for a few weeks, this section of the
+README will be removed and updates will happen normally.
 
 ## Troubleshooting
 

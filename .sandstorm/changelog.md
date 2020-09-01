@@ -1,3 +1,7 @@
+# 2020-07-29 (2020-09-01)
+
+ * Upgrade DokuWiki
+
 # 2017-02-19b-sandstorm6 (2017-03-14)
 
  * Upgrade DokuWiki

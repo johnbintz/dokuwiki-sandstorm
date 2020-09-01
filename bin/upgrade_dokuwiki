@@ -34,7 +34,7 @@ lines = File.readlines('.sandstorm/sandstorm-pkgdef.capnp')
 lines = lines.map do |line|
   next line unless line['appVersion']
 
-  line.gsub(/= ([0-9])+,/) { |m| "= #{$1.to_i + 1}," }
+  line.gsub(/= ([0-9]+),/) { |m| "= #{$1.to_i + 1}," }
 end
 
 File.open('.sandstorm/sandstorm-pkgdef.capnp', 'w') { |fh| fh.print lines.join }
